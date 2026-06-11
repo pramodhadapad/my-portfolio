@@ -1,325 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"/>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNEQ5RkZGIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2E3OGJmYSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0idXJsKCNnKSIvPgogIDx0ZXh0IHg9IjE2IiB5PSIyMiIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iOTAwIgogICAgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSItMC41Ij5QSDwvdGV4dD4KPC9zdmc+"/>
-  <link rel="shortcut icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNEQ5RkZGIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2E3OGJmYSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0idXJsKCNnKSIvPgogIDx0ZXh0IHg9IjE2IiB5PSIyMiIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iOTAwIgogICAgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSItMC41Ij5QSDwvdGV4dD4KPC9zdmc+"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Pramod Hadapad — AI Builder & Prompt Engineer</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="css/style.css"/>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNEQ5RkZGIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2E3OGJmYSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0idXJsKCNnKSIvPgogIDx0ZXh0IHg9IjE2IiB5PSIyMiIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iOTAwIgogICAgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSItMC41Ij5QSDwvdGV4dD4KPC9zdmc+" />
+  <link rel="shortcut icon"
+    href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNEQ5RkZGIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2E3OGJmYSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0idXJsKCNnKSIvPgogIDx0ZXh0IHg9IjE2IiB5PSIyMiIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iOTAwIgogICAgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSItMC41Ij5QSDwvdGV4dD4KPC9zdmc+" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pramod Hadapad — AI Builder & Prompt Engineer</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
-<div id="loader">
-  <div class="loader-name">
-    <span>P</span><span>r</span><span>a</span><span>m</span><span>o</span><span>d</span><span>&nbsp;</span><span class="accent">H</span><span class="accent">a</span><span class="accent">d</span><span class="accent">a</span><span class="accent">p</span><span class="accent">a</span><span class="accent">d</span>
-  </div>
-  <div class="loader-bar-wrap"><div class="loader-bar-fill"></div></div>
-</div>
-<div id="toast">✅ Email copied to clipboard!</div>
-<div class="modal-backdrop" id="modalBackdrop" onclick="closeModal(event)">
-  <div class="modal" id="modalBox">
-    <button class="modal-close" onclick="document.getElementById('modalBackdrop').classList.remove('open')">✕</button>
-    <img class="modal-img" id="modal-img" src="" alt=""/>
-    <div class="modal-badge" id="modal-badge"></div>
-    <div class="modal-title" id="modal-title"></div>
-    <p class="modal-desc" id="modal-desc"></p>
-    <div class="modal-section-label">Tech Stack</div>
-    <div class="modal-tags" id="modal-tags"></div>
-    <div class="modal-links" id="modal-links"></div>
-  </div>
-</div>
-<div id="scroll-bar"></div>
-<div id="cur-dot"></div>
-<div id="cur-ring"></div>
-<div id="cursor-glow"></div>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#about" onclick="closeMobile()">About</a>
-  <a href="#projects" onclick="closeMobile()">Projects</a>
-  <a href="#skills" onclick="closeMobile()">Skills</a>
-  <a href="#contact" onclick="closeMobile()">Contact</a>
-</div>
-
-
-<nav>
-  <a href="#" class="nav-logo">PH<span>.</span></a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a href="https://linkedin.com/in/pramod-hadapad-287627224" target="_blank" class="nav-cta">Hire Me</a>
-  <div class="hamburger" id="hamburger" onclick="toggleMobile()"><span></span><span></span><span></span></div>
-</nav>
-
-<section class="hero" id="home">
-  <div class="hero-left">
-    <div class="hero-badge">Available for Freelance &amp; Full-Time</div>
-    <h1>Pramod<br><span class="accent">Hadapad</span></h1>
-    <p class="hero-desc">I'm a <span class="typewriter-wrap"><span class="typewriter-text" id="typewriter"></span><span class="typewriter-cursor"></span></span><br>I turn ideas into deployed, real-world products — using AI tools, creative thinking, and zero limits.</p>
-    <div class="hero-actions">
-      <a href="#projects" class="btn-primary">View My Work</a>
-      <a href="#contact" class="btn-secondary">Get In Touch</a>
+  <div id="loader">
+    <div class="loader-name">
+      <span>P</span><span>r</span><span>a</span><span>m</span><span>o</span><span>d</span><span>&nbsp;</span><span
+        class="accent">H</span><span class="accent">a</span><span class="accent">d</span><span
+        class="accent">a</span><span class="accent">p</span><span class="accent">a</span><span class="accent">d</span>
+    </div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar-fill"></div>
     </div>
   </div>
-  <div class="hero-right">
-    <div class="terminal reveal">
-      <div class="terminal-bar">
-        <div class="terminal-dot r"></div><div class="terminal-dot y"></div><div class="terminal-dot g"></div>
-      </div>
-      <div class="terminal-line"><span class="prompt">pramod@portfolio</span><span class="dim">:~$</span> <span class="cmd">whoami</span></div>
-      <div class="terminal-line"><span class="out">AI Builder · Prompt Engineer · MCA Student</span></div>
-      <div class="terminal-line" style="margin-top:8px;"><span class="prompt">pramod@portfolio</span><span class="dim">:~$</span> <span class="cmd">ls projects/</span></div>
-      <div class="terminal-line"><span class="out">repochat-ai/  placement-cell/  racing-game/  student-mgmt/</span></div>
-      <div class="terminal-line" style="margin-top:8px;"><span class="prompt">pramod@portfolio</span><span class="dim">:~$</span> <span id="terminal-typing"></span><span class="typewriter-cursor"></span></div>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-card">
-        <div class="stat-icon">🚀</div>
-        <div><div class="stat-label">Live Product Deployed</div><div class="stat-value">RepoChat AI — Vercel + Render</div></div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon">🤖</div>
-        <div><div class="stat-label">Core Strength</div><div class="stat-value">AI Prompting + Product Building</div></div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon">🎓</div>
-        <div><div class="stat-label">Currently Studying</div><div class="stat-value">MCA — Chetan Business School</div></div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon">📍</div>
-        <div><div class="stat-label">Based In</div><div class="stat-value">Vijaypur, Karnataka, India</div></div>
-      </div>
+  <div id="toast">✅ Email copied to clipboard!</div>
+  <div class="modal-backdrop" id="modalBackdrop" onclick="closeModal(event)">
+    <div class="modal" id="modalBox">
+      <button class="modal-close" onclick="document.getElementById('modalBackdrop').classList.remove('open')">✕</button>
+      <img class="modal-img" id="modal-img" src="" alt="" />
+      <div class="modal-badge" id="modal-badge"></div>
+      <div class="modal-title" id="modal-title"></div>
+      <p class="modal-desc" id="modal-desc"></p>
+      <div class="modal-section-label">Tech Stack</div>
+      <div class="modal-tags" id="modal-tags"></div>
+      <div class="modal-links" id="modal-links"></div>
     </div>
   </div>
-</section>
+  <div id="scroll-bar"></div>
+  <div id="cur-dot"></div>
+  <div id="cur-ring"></div>
+  <div id="cursor-glow"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMobile()">About</a>
+    <a href="#projects" onclick="closeMobile()">Projects</a>
+    <a href="#skills" onclick="closeMobile()">Skills</a>
+    <a href="#contact" onclick="closeMobile()">Contact</a>
+  </div>
 
-<section id="about">
-  <div class="about-grid">
-    <div class="about-profile reveal">
-      <div class="profile-card">
-        <div class="profile-img-wrap">
-          <img src="assets/images/profile.jpg" alt="Pramod Hadapad" class="profile-img"/>
-          <div class="profile-overlay-glow"></div>
+
+  <nav>
+    <a href="#" class="nav-logo">PH<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="https://linkedin.com/in/pramod-hadapad-287627224" target="_blank" class="nav-cta">Hire Me</a>
+    <div class="hamburger" id="hamburger" onclick="toggleMobile()"><span></span><span></span><span></span></div>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-left">
+      <div class="hero-badge">Available for Freelance &amp; Full-Time</div>
+      <h1>Pramod<br><span class="accent">Hadapad</span></h1>
+      <p class="hero-desc">I'm a <span class="typewriter-wrap"><span class="typewriter-text"
+            id="typewriter"></span><span class="typewriter-cursor"></span></span><br>I turn ideas into deployed,
+        real-world products — using AI tools, creative thinking, and zero limits.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-secondary">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="terminal reveal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
         </div>
-        <div class="profile-info">
-          <h3 class="profile-name">Pramod Hadapad</h3>
-          <p class="profile-title">AI Builder & MCA Student</p>
+        <div class="terminal-line"><span class="prompt">pramod@portfolio</span><span class="dim">:~$</span> <span
+            class="cmd">whoami</span></div>
+        <div class="terminal-line"><span class="out">AI Builder · Prompt Engineer · MCA Student</span></div>
+        <div class="terminal-line" style="margin-top:8px;"><span class="prompt">pramod@portfolio</span><span
+            class="dim">:~$</span> <span class="cmd">ls projects/</span></div>
+        <div class="terminal-line"><span class="out">repochat-ai/ placement-cell/ racing-game/ student-mgmt/</span>
+        </div>
+        <div class="terminal-line" style="margin-top:8px;"><span class="prompt">pramod@portfolio</span><span
+            class="dim">:~$</span> <span id="terminal-typing"></span><span class="typewriter-cursor"></span></div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-icon"></div>
+          <div>
+            <div class="stat-label">Live Product Deployed</div>
+            <div class="stat-value">RepoChat AI — Vercel + Render</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"></div>
+          <div>
+            <div class="stat-label">Core Strength</div>
+            <div class="stat-value">AI Prompting + Product Building</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"></div>
+          <div>
+            <div class="stat-label">2024-2026</div>
+            <div class="stat-value">MCA — Chetan Business School</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"></div>
+          <div>
+            <div class="stat-label">Based In</div>
+            <div class="stat-value">Vijaypur, Karnataka, India</div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="about-text reveal">
-      <div class="section-label">About Me</div>
-      <h2 class="section-title">Building the future<br>one prompt at a time.</h2>
-      <p>I'm <strong>Pramod Hadapad</strong> — an AI Builder and Prompt Engineer from Karnataka, India. I don't come from a traditional coding background, and that's my superpower.</p>
-      <p>I build fully functional, deployed web applications and SaaS products using AI tools and creative prompting. While most people debate whether AI can replace developers — I'm already shipping products.</p>
-      <p>My approach: <strong>Vibe Coding</strong> — combining AI capabilities with product thinking to build intelligent, scalable software without limits.</p>
-      <div class="about-facts">
-        <div class="fact-row"><div class="dot"></div> Deployed full-stack SaaS with OAuth &amp; multi-LLM integration</div>
-        <div class="fact-row"><div class="dot"></div> Pursuing MCA — combining formal knowledge with hands-on building</div>
-        <div class="fact-row"><div class="dot"></div> Passionate about prompt engineering, cloud, and UI/UX</div>
-        <div class="fact-row"><div class="dot"></div> Open to freelance, startup, and agency collaborations</div>
-      </div>
-    </div>
-    <div class="edu-cards reveal">
-      <div class="section-label" style="margin-bottom:20px;">Education</div>
-      <div class="edu-card">
-        <div class="edu-school">Chetan Business School, Karnataka, Hubli</div>
-        <div class="edu-degree">Master of Computer Applications (MCA)</div>
-        <div class="edu-year">Ongoing</div>
-      </div>
-      <div class="edu-card">
-        <div class="edu-school">CN Prakash College, Karnataka, Bijapur</div>
-        <div class="edu-degree">Bachelor's Degree</div>
-        <div class="edu-year">Completed — 2021</div>
-      </div>
-      <div class="edu-card">
-        <div class="edu-school">Shantiniketan College, Bijapur</div>
-        <div class="edu-degree">Pre-University Course (PUC)</div>
-        <div class="edu-year">Completed — 2017</div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="projects">
-  <div class="section-head reveal">
-    <div class="section-label">Projects</div>
-    <h2 class="section-title">Things I've shipped.</h2>
-    <p class="section-sub">Real products, live deployments. Built using AI-assisted development and creative problem solving.</p>
-  </div>
-  <div class="projects-grid">
-    <div class="project-card featured reveal stagger-child" onclick="openModal('repochat')">
-      <div class="live-badge">Live Product</div>
-      <img class="project-img" src="assets/images/repochat_screenshot.png" alt="RepoChat screenshot"/>
-      <div class="project-emoji">💬</div>
-      <div class="project-title">RepoChat AI</div>
-      <p class="project-desc">A full-stack SaaS that lets you chat with any GitHub repository using AI. Built with React/Vite frontend and Node.js backend. Features Google &amp; GitHub OAuth, multi-LLM support (OpenAI, Anthropic, Gemini), and fully deployed on Vercel + Render.</p>
-      <div class="project-tags">
-        <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Vite</span><span class="tag">OAuth</span><span class="tag">OpenAI</span><span class="tag">Anthropic</span><span class="tag">Gemini</span><span class="tag">Vercel</span>
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-profile reveal">
+        <div class="profile-card">
+          <div class="profile-img-wrap">
+            <img src="assets/images/profile.jpg" alt="Pramod Hadapad" class="profile-img" />
+            <div class="profile-overlay-glow"></div>
+          </div>
+          <div class="profile-info">
+            <h3 class="profile-name">Pramod Hadapad</h3>
+            <p class="profile-title">AI Builder & MCA Student</p>
+          </div>
+        </div>
       </div>
-      <div class="project-links">
-        <a href="https://repochat-ai.vercel.app" target="_blank">🔗 Live Demo</a>
-        <a href="https://github.com/pramodhadapad" target="_blank">⌥ GitHub</a>
+      <div class="about-text reveal">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">Building the future<br>one prompt at a time.</h2>
+        <p> <strong>Pramod Hadapad</strong> — an AI Builder and Prompt Engineer from Karnataka, India. I don't come from
+          a traditional coding background, and that's my superpower.</p>
+        <p>I build fully functional, deployed web applications and SaaS products using AI tools and creative prompting.
+          While most people debate whether AI can replace developers — I'm already shipping products.</p>
+        <p>My approach: <strong>AI-Assisted Development</strong> — combining AI capabilities with product thinking to
+          build
+          intelligent, scalable software without limits.</p>
+        <div class="about-facts">
+          <div class="fact-row">
+            <div class="dot"></div> Deployed full-stack SaaS with OAuth &amp; multi-LLM integration
+          </div>
+          <div class="fact-row">
+            <div class="dot"></div> Completed MCA — combining knowledge with hands-on building
+          </div>
+          <div class="fact-row">
+            <div class="dot"></div> Passionate about prompt engineering, cloud, and UI/UX
+          </div>
+          <div class="fact-row">
+            <div class="dot"></div> Open to freelance, startup, and agency collaborations
+          </div>
+        </div>
+      </div>
+      <div class="edu-cards reveal">
+        <div class="section-label" style="margin-bottom:20px;">Education</div>
+        <div class="edu-card">
+          <div class="edu-school">Chetan Business School, Karnataka, Hubli</div>
+          <div class="edu-degree">Master of Computer Applications (MCA)</div>
+          <div class="edu-year">2024-2026</div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-school">CN Prakash College, Karnataka, Bijapur</div>
+          <div class="edu-degree">Bachelor's Degree</div>
+          <div class="edu-year">2019-2021</div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-school">Shantiniketan College, Bijapur</div>
+          <div class="edu-degree">Pre-University Course (PUC)</div>
+          <div class="edu-year">2015-2017</div>
+        </div>
       </div>
     </div>
-    <div class="project-card reveal stagger-child" onclick="openModal('placement')">
-      <img class="project-img" src="assets/images/placement_cell_screenshot.png" alt="Placement Cell screenshot"/>
-      <div class="project-emoji">🏢</div>
-      <div class="project-title">Placement Cell Management</div>
-      <p class="project-desc">A full-stack web system to streamline college placement processes with database management and a responsive UI.</p>
-      <div class="project-tags"><span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">Database</span></div>
-      <div class="project-links"><a href="https://github.com/pramodhadapad" target="_blank">⌥ GitHub</a></div>
-    </div>
-    <div class="project-card reveal stagger-child" onclick="openModal('racing')">
-      <img class="project-img" src="assets/images/3d_car_racing_screenshot.png" alt="3D Car Racing screenshot"/>
-      <div class="project-emoji">🏎️</div>
-      <div class="project-title">3D Car Racing Game</div>
-      <p class="project-desc">A fully interactive 3D racing game built using C and OpenGL libraries with real-time game logic and low-level graphics.</p>
-      <div class="project-tags"><span class="tag">C</span><span class="tag">OpenGL</span><span class="tag">3D Graphics</span></div>
-      <div class="project-links"><a href="https://github.com/pramodhadapad" target="_blank">⌥ GitHub</a></div>
-    </div>
-    <div class="project-card reveal stagger-child" onclick="openModal('student')">
-      <img class="project-img" src="assets/images/student_assignment_screenshot.png" alt="Student Assignment screenshot"/>
-      <div class="project-emoji">📚</div>
-      <div class="project-title">Student Assignment System</div>
-      <p class="project-desc">Full-stack application for managing academic assignments with a Java backend and complete CRUD operations.</p>
-      <div class="project-tags"><span class="tag">Java</span><span class="tag">HTML/CSS</span><span class="tag">Full Stack</span></div>
-      <div class="project-links"><a href="https://github.com/pramodhadapad" target="_blank">⌥ GitHub</a></div>
-    </div>
-    <div class="project-card reveal stagger-child" onclick="openModal('cafe')">
-      <div class="project-emoji">☕</div>
-      <div class="project-title">Café Management System</div>
-      <p class="project-desc">A digital operations system for café management — handling orders, inventory, and daily operations through a clean interface.</p>
-      <div class="project-tags"><span class="tag">Design</span><span class="tag">Management</span><span class="tag">UI/UX</span></div>
-      <div class="project-links"><a href="https://github.com/pramodhadapad" target="_blank">⌥ GitHub</a></div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="skills">
-  <div class="section-head reveal">
-    <div class="section-label">Skills &amp; Tools</div>
-    <h2 class="section-title">What I work with.</h2>
-    <p class="section-sub">A mix of AI tools, development fundamentals, and product-building skills — my actual working toolkit.</p>
-  </div>
-  <div class="skills-grid">
-    <div class="skill-group reveal stagger-child">
-      <div class="skill-group-icon">🤖</div>
-      <div class="skill-group-title">AI &amp; Prompt Engineering</div>
-      <div class="skill-tags">
-        <span class="skill-tag">Prompt Engineering</span><span class="skill-tag">AI Workflows</span><span class="skill-tag">OpenAI API</span><span class="skill-tag">Anthropic API</span><span class="skill-tag">Gemini API</span><span class="skill-tag">LLM Integration</span><span class="skill-tag">Vibe Coding</span>
+  <section id="projects">
+    <div class="section-head reveal">
+      <div class="section-label">Projects</div>
+      <h2 class="section-title">Things I've shipped.</h2>
+      <p class="section-sub">Real products, live deployments. Built using AI-assisted development and creative problem
+        solving.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card featured reveal stagger-child" onclick="openModal('repochat')">
+        <div class="live-badge">Live Product</div>
+        <img class="project-img" src="assets/images/repochat_screenshot.png" alt="RepoChat screenshot" />
+        <div class="project-emoji">💬</div>
+        <div class="project-title">RepoChat AI</div>
+        <p class="project-desc">A full-stack SaaS that lets you chat with any GitHub repository using AI. Built with
+          React/Vite frontend and Node.js backend. Features Google &amp; GitHub OAuth, multi-LLM support (OpenAI,
+          Anthropic, Gemini), and fully deployed on Vercel + Render.</p>
+        <div class="project-tags">
+          <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Vite</span><span
+            class="tag">OAuth</span><span class="tag">OpenAI</span><span class="tag">Anthropic</span><span
+            class="tag">Gemini</span><span class="tag">Vercel</span>
+        </div>
+        <div class="project-links">
+          <a href="https://repochat-ai.vercel.app" target="_blank">🔗 Live Demo</a>
+          <a href="https://github.com/pramodhadapad" target="_blank">⌥ GitHub</a>
+        </div>
+      </div>
+      <div class="project-card reveal stagger-child" onclick="openModal('placement')">
+        <img class="project-img" src="assets/images/placement_cell_screenshot.png" alt="Placement Cell screenshot" />
+        <div class="project-emoji">🏢</div>
+        <div class="project-title">Placement Cell Management</div>
+        <p class="project-desc">A full-stack web system to streamline college placement processes with database
+          management and a responsive UI.</p>
+        <div class="project-tags"><span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span
+            class="tag">Database</span></div>
+        <div class="project-links"><a href="https://github.com/pramodhadapad" target="_blank">⌥ GitHub</a></div>
+      </div>
+      <div class="project-card reveal stagger-child" onclick="openModal('racing')">
+        <img class="project-img" src="assets/images/3d_car_racing_screenshot.png" alt="3D Car Racing screenshot" />
+        <div class="project-emoji">🏎️</div>
+        <div class="project-title">3D Car Racing Game</div>
+        <p class="project-desc">A fully interactive 3D racing game built using C and OpenGL libraries with real-time
+          game logic and low-level graphics.</p>
+        <div class="project-tags"><span class="tag">C</span><span class="tag">OpenGL</span><span class="tag">3D
+            Graphics</span></div>
+        <div class="project-links"><a href="https://github.com/pramodhadapad" target="_blank">⌥ GitHub</a></div>
+      </div>
+      <div class="project-card reveal stagger-child" onclick="openModal('student')">
+        <img class="project-img" src="assets/images/student_assignment_screenshot.png"
+          alt="Student Assignment screenshot" />
+        <div class="project-emoji">📚</div>
+        <div class="project-title">Student Assignment System</div>
+        <p class="project-desc">Full-stack application for managing academic assignments with a Java backend and
+          complete CRUD operations.</p>
+        <div class="project-tags"><span class="tag">Java</span><span class="tag">HTML/CSS</span><span class="tag">Full
+            Stack</span></div>
+        <div class="project-links"><a href="https://github.com/pramodhadapad" target="_blank">⌥ GitHub</a></div>
+      </div>
+      <div class="project-card reveal stagger-child" onclick="openModal('cafe')">
+        <div class="project-emoji">☕</div>
+        <div class="project-title">Café Management System</div>
+        <p class="project-desc">A digital operations system for café management — handling orders, inventory, and daily
+          operations through a clean interface.</p>
+        <div class="project-tags"><span class="tag">Design</span><span class="tag">Management</span><span
+            class="tag">UI/UX</span></div>
+        <div class="project-links"><a href="https://github.com/pramodhadapad" target="_blank">⌥ GitHub</a></div>
       </div>
     </div>
-    <div class="skill-group reveal stagger-child">
-      <div class="skill-group-icon">💻</div>
-      <div class="skill-group-title">Development</div>
-      <div class="skill-tags">
-        <span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span class="skill-tag">JavaScript</span><span class="skill-tag">React</span><span class="skill-tag">Node.js</span><span class="skill-tag">Python</span><span class="skill-tag">REST APIs</span><span class="skill-tag">OAuth</span>
-      </div>
-    </div>
-    <div class="skill-group reveal stagger-child">
-      <div class="skill-group-icon">🛠️</div>
-      <div class="skill-group-title">Tools &amp; Platforms</div>
-      <div class="skill-tags">
-        <span class="skill-tag">GitHub</span><span class="skill-tag">GitHub Copilot</span><span class="skill-tag">VS Code</span><span class="skill-tag">Vercel</span><span class="skill-tag">Render</span><span class="skill-tag">Git</span><span class="skill-tag">UI/UX Design</span>
-      </div>
-    </div>
-  </div>
-  <div style="margin-top:60px;" class="reveal">
-    <div class="section-label" style="margin-bottom:8px;">Certifications</div>
-    <h3 class="section-title" style="font-size:28px; margin-bottom:0;">Credentials.</h3>
-  </div>
-  <div class="certs-row">
-    <div class="cert-card reveal">
-      <img class="cert-img" src="assets/images/microsoft_azure_certificate.png" alt="Microsoft Azure Certificate"/>
-      <div class="cert-title">☁️ Microsoft Azure</div>
-      <div class="cert-subtitle">Microsoft Elevate × CBS · Jan 2026</div>
-    </div>
-    <div class="cert-card reveal">
-      <img class="cert-img" src="assets/images/metvy_ai_ml_certificate.png" alt="Metvy AI/ML Certificate"/>
-      <div class="cert-title">🧠 AI &amp; Machine Learning</div>
-      <div class="cert-subtitle">Metvy × CBS Hubli · Feb–Apr 2025</div>
-    </div>
-    <div class="cert-card reveal">
-      <img class="cert-img" src="assets/images/ui_masterline_certificate.png" alt="UI MasterLine Certificate"/>
-      <div class="cert-title">🎨 UI MasterLine</div>
-      <div class="cert-subtitle">UI Design Competition · CBS Dec 2025</div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="contact">
-  <div class="reveal">
-    <div class="section-label">Contact</div>
-    <h2 class="section-title">Let's build something.</h2>
-    <p class="section-sub">Open to freelance projects, startup collaborations, and full-time opportunities. If you have an idea, let's talk.</p>
+  <section id="skills">
+    <div class="section-head reveal">
+      <div class="section-label">Skills &amp; Tools</div>
+      <h2 class="section-title">What I work with.</h2>
+      <p class="section-sub">A mix of AI tools, development fundamentals, and product-building skills — my actual
+        working toolkit.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group reveal stagger-child">
+        <div class="skill-group-icon">🤖</div>
+        <div class="skill-group-title">AI &amp; Prompt Engineering</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Prompt Engineering</span><span class="skill-tag">AI Workflows</span><span
+            class="skill-tag">OpenAI API</span><span class="skill-tag">Anthropic API</span><span
+            class="skill-tag">Gemini API</span><span class="skill-tag">LLM Integration</span><span
+            class="skill-tag">AI-Assisted Development</span>
+        </div>
+      </div>
+      <div class="skill-group reveal stagger-child">
+        <div class="skill-group-icon">💻</div>
+        <div class="skill-group-title">Development</div>
+        <div class="skill-tags">
+          <span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span
+            class="skill-tag">JavaScript</span><span class="skill-tag">React</span><span
+            class="skill-tag">Node.js</span><span class="skill-tag">Python</span><span class="skill-tag">REST
+            APIs</span><span class="skill-tag">OAuth</span>
+        </div>
+      </div>
+      <div class="skill-group reveal stagger-child">
+        <div class="skill-group-icon">🛠️</div>
+        <div class="skill-group-title">Tools &amp; Platforms</div>
+        <div class="skill-tags">
+          <span class="skill-tag">GitHub</span><span class="skill-tag">GitHub Copilot</span><span class="skill-tag">VS
+            Code</span><span class="skill-tag">Vercel</span><span class="skill-tag">Render</span><span
+            class="skill-tag">Git</span><span class="skill-tag">UI/UX Design</span>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:60px;" class="reveal">
+      <div class="section-label" style="margin-bottom:8px;">Certifications</div>
+      <h3 class="section-title" style="font-size:28px; margin-bottom:0;">Credentials.</h3>
+    </div>
+    <div class="certs-row">
+      <div class="cert-card reveal">
+        <img class="cert-img" src="assets/images/microsoft_azure_certificate.png" alt="Microsoft Azure Certificate" />
+        <div class="cert-title">☁️ Microsoft Azure</div>
+        <div class="cert-subtitle">Microsoft Elevate × CBS · Jan 2026</div>
+      </div>
+      <div class="cert-card reveal">
+        <img class="cert-img" src="assets/images/metvy_ai_ml_certificate.png" alt="Metvy AI/ML Certificate" />
+        <div class="cert-title">🧠 AI &amp; Machine Learning</div>
+        <div class="cert-subtitle">Metvy × CBS Hubli · Feb–Apr 2025</div>
+      </div>
+      <div class="cert-card reveal">
+        <img class="cert-img" src="assets/images/ui_masterline_certificate.png" alt="UI MasterLine Certificate" />
+        <div class="cert-title">🎨 UI MasterLine</div>
+        <div class="cert-subtitle">UI Design Competition · CBS Dec 2025</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="reveal">
+      <div class="section-label">Contact</div>
+      <h2 class="section-title">Let's build something.</h2>
+      <p class="section-sub">Open to freelance projects, startup collaborations, and full-time opportunities. If you
+        have an idea, let's talk.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <a href="mailto:pramodh5555@gmail.com" class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          <div>
+            <div class="contact-item-label">Email</div>
+            <div class="contact-item-value">pramodh5555@gmail.com</div>
+          </div>
+        </a>
+        <a href="tel:+919113506351" class="contact-item">
+          <div class="contact-item-icon">📱</div>
+          <div>
+            <div class="contact-item-label">Phone</div>
+            <div class="contact-item-value">+91 9113506351</div>
+          </div>
+        </a>
+        <a href="https://github.com/pramodhadapad" target="_blank" class="contact-item">
+          <div class="contact-item-icon">⌥</div>
+          <div>
+            <div class="contact-item-label">GitHub</div>
+            <div class="contact-item-value">github.com/pramodhadapad</div>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/pramod-hadapad-287627224" target="_blank" class="contact-item">
+          <div class="contact-item-icon">💼</div>
+          <div>
+            <div class="contact-item-label">LinkedIn</div>
+            <div class="contact-item-value">pramod-hadapad-287627224</div>
+          </div>
+        </a>
+        <div class="contact-item" style="cursor:default;">
+          <div class="contact-item-icon">📍</div>
+          <div>
+            <div class="contact-item-label">Location</div>
+            <div class="contact-item-value">Vijaypur, Karnataka, India</div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form reveal" onsubmit="handleContactSubmit(event)">
+        <div class="form-row">
+          <div class="form-group"><label>Your Name</label><input type="text" id="contact-name" placeholder="Name"
+              required /></div>
+          <div class="form-group"><label>Your Email</label><input type="email" id="contact-email" placeholder="Email id"
+              required /></div>
+        </div>
+        <div class="form-group"><label>Subject</label><input type="text" id="contact-subject"
+            placeholder="Freelance project / Job opportunity..." required /></div>
+        <div class="form-group"><label>Message</label><textarea id="contact-message" rows="5"
+            placeholder="Tell me about your project or opportunity..." required></textarea></div>
+        <button type="submit" class="form-submit" id="contact-submit-btn">Send Message →</button>
+      </form>
+    </div>
+  </section>
+
+  <div class="ticker-wrap">
+    <div class="ticker-track"><span class="ticker-item"><span class="dot">◆</span>⚡ Currently building → RepoChat
+        v2</span><span class="ticker-item"><span class="dot">◆</span>🚀 Last deployed →
+        repochat-ai.vercel.app</span><span class="ticker-item"><span class="dot">◆</span>🤖 Stack → React · Node.js ·
+        OpenAI · Anthropic · Gemini</span><span class="ticker-item"><span class="dot">◆</span>📍 Based in → Vijaypur,
+        Karnataka, India</span><span class="ticker-item"><span class="dot">◆</span>✅ Open to → Freelance · Startups ·
+        Full-time</span><span class="ticker-item"><span class="dot">◆</span>🎓 MCA at Chetan Business
+        School</span><span class="ticker-item"><span class="dot">◆</span>⚡ Ready To Build SAAS Products</span><span
+        class="ticker-item"><span class="dot">◆</span>🚀 Get Connected TO Build Together</span><span
+        class="ticker-item"><span class="dot">◆</span>🤖 Stack → React · Node.js · OpenAI · Anthropic ·
+        Gemini</span><span class="ticker-item"><span class="dot">◆</span>📍 Based in → Vijaypur, Karnataka,
+        India</span><span class="ticker-item"><span class="dot">◆</span>✅ Open to → Freelance · Startups ·
+        Full-time</span><span class="ticker-item"><span class="dot">◆</span>🎓 → MCA at Chetan Business
+        School</span></div>
   </div>
-  <div class="contact-grid">
-    <div class="contact-info reveal">
-      <a href="mailto:pramodh5555@gmail.com" class="contact-item">
-        <div class="contact-item-icon">✉️</div>
-        <div><div class="contact-item-label">Email</div><div class="contact-item-value">pramodh5555@gmail.com</div></div>
+  <footer>
+    <p>© 2026 Pramod Hadapad · Built with AI &amp; Creative Thinking</p>
+    <div class="footer-links">
+      <a href="#home">Top</a>
+      <a href="#projects">Projects</a>
+      <a href="mailto:pramodh5555@gmail.com">Email</a>
+      <a href="https://github.com/pramodhadapad" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/pramod-hadapad-287627224" target="_blank">LinkedIn</a>
+    </div>
+
+
+
+    <div class="social-sidebar">
+      <a href="https://github.com/pramodhadapad" target="_blank" title="GitHub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+        </svg>
       </a>
-      <a href="tel:+919113506351" class="contact-item">
-        <div class="contact-item-icon">📱</div>
-        <div><div class="contact-item-label">Phone</div><div class="contact-item-value">+91 9113506351</div></div>
+      <a href="https://linkedin.com/in/pramod-hadapad-287627224" target="_blank" title="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+        </svg>
       </a>
-      <a href="https://github.com/pramodhadapad" target="_blank" class="contact-item">
-        <div class="contact-item-icon">⌥</div>
-        <div><div class="contact-item-label">GitHub</div><div class="contact-item-value">github.com/pramodhadapad</div></div>
+      <a href="mailto:pramodhadapad.mca@gmail.com" title="Email" onclick="copyEmail(event)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+          <polyline points="22,6 12,12 2,6" />
+        </svg>
       </a>
-      <a href="https://linkedin.com/in/pramod-hadapad-287627224" target="_blank" class="contact-item">
-        <div class="contact-item-icon">💼</div>
-        <div><div class="contact-item-label">LinkedIn</div><div class="contact-item-value">pramod-hadapad-287627224</div></div>
-      </a>
-      <div class="contact-item" style="cursor:default;">
-        <div class="contact-item-icon">📍</div>
-        <div><div class="contact-item-label">Location</div><div class="contact-item-value">Vijaypur, Karnataka, India</div></div>
-      </div>
     </div>
-    <form class="contact-form reveal" onsubmit="handleContactSubmit(event)">
-      <div class="form-row">
-        <div class="form-group"><label>Your Name</label><input type="text" id="contact-name" placeholder="Name" required/></div>
-        <div class="form-group"><label>Your Email</label><input type="email" id="contact-email" placeholder="Email id" required/></div>
-      </div>
-      <div class="form-group"><label>Subject</label><input type="text" id="contact-subject" placeholder="Freelance project / Job opportunity..." required/></div>
-      <div class="form-group"><label>Message</label><textarea id="contact-message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea></div>
-      <button type="submit" class="form-submit" id="contact-submit-btn">Send Message →</button>
-    </form>
-  </div>
-</section>
+    <div class="email-sidebar">
+      <a href="mailto:pramodhadapad.mca@gmail.com" onclick="copyEmail(event)">pramodhadapad.mca@gmail.com</a>
+    </div>
 
-<div class="ticker-wrap"><div class="ticker-track"><span class="ticker-item"><span class="dot">◆</span>⚡ Currently building → RepoChat v2</span><span class="ticker-item"><span class="dot">◆</span>🚀 Last deployed → repochat-ai.vercel.app</span><span class="ticker-item"><span class="dot">◆</span>🤖 Stack → React · Node.js · OpenAI · Anthropic · Gemini</span><span class="ticker-item"><span class="dot">◆</span>📍 Based in → Vijaypur, Karnataka, India</span><span class="ticker-item"><span class="dot">◆</span>✅ Open to → Freelance · Startups · Full-time</span><span class="ticker-item"><span class="dot">◆</span>🎓 Studying → MCA at Chetan Business School</span><span class="ticker-item"><span class="dot">◆</span>⚡ Currently building → RepoChat v2</span><span class="ticker-item"><span class="dot">◆</span>🚀 Last deployed → repochat-ai.vercel.app</span><span class="ticker-item"><span class="dot">◆</span>🤖 Stack → React · Node.js · OpenAI · Anthropic · Gemini</span><span class="ticker-item"><span class="dot">◆</span>📍 Based in → Vijaypur, Karnataka, India</span><span class="ticker-item"><span class="dot">◆</span>✅ Open to → Freelance · Startups · Full-time</span><span class="ticker-item"><span class="dot">◆</span>🎓 Studying → MCA at Chetan Business School</span></div></div>
-<footer>
-  <p>© 2026 Pramod Hadapad · Built with AI &amp; Creative Thinking</p>
-  <div class="footer-links">
-    <a href="#home">Top</a>
-    <a href="#projects">Projects</a>
-    <a href="mailto:pramodh5555@gmail.com">Email</a>
-    <a href="https://github.com/pramodhadapad" target="_blank">GitHub</a>
-    <a href="https://linkedin.com/in/pramod-hadapad-287627224" target="_blank">LinkedIn</a>
-  </div>
-
-
-
-<div class="social-sidebar">
-  <a href="https://github.com/pramodhadapad" target="_blank" title="GitHub">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-  </a>
-  <a href="https://linkedin.com/in/pramod-hadapad-287627224" target="_blank" title="LinkedIn">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-  </a>
-  <a href="mailto:pramodhadapad.mca@gmail.com" title="Email" onclick="copyEmail(event)">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
-  </a>
-</div>
-<div class="email-sidebar">
-  <a href="mailto:pramodhadapad.mca@gmail.com" onclick="copyEmail(event)">pramodhadapad.mca@gmail.com</a>
-</div>
-
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
